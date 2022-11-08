@@ -82,6 +82,7 @@ function saveRecipesToStorage(recipes) {
   // B3. TODO - Add an event listener for the 'submit' event, which fires when the
   //            submit button is clicked
   const submitButton = document.querySelector('input[type=submit]');
+  if(submitButton){
   submitButton.addEventListener('click', function(event) {
     event.preventDefault();
     // Steps B4-B9 will occur inside the event listener from step B3
@@ -115,6 +116,7 @@ function saveRecipesToStorage(recipes) {
     // save recipes array back to localStorage
     saveRecipesToStorage(recipesArray);
   });
+};
 
   // B5. TODO - Create an empty object (I'll refer to this object as recipeObject to
   //            make this easier to read), and then extract the keys and corresponding
